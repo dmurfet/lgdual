@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAR 2015 11:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAR 2015 11:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -969,15 +969,12 @@ Package rerunfilecheck Info: File `LGdual.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5068.
  ) 
 Here is how much of TeX's memory you used:
  25677 strings out of 493315
  468300 string characters out of 6137904
- 842383 words of memory out of 5000000
+ 842391 words of memory out of 5000000
  28266 multiletter control sequences out of 15000+600000
  23184 words of font info for 104 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1019,7 +1016,7 @@ ist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
 e1/public/xypic/xycmbt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pu
 blic/xypic/xydash10.pfb>
-Output written on LGdual.pdf (61 pages, 919615 bytes).
+Output written on LGdual.pdf (61 pages, 919200 bytes).
 PDF statistics:
  1456 PDF objects out of 1728 (max. 8388607)
  1322 compressed objects within 14 object streams

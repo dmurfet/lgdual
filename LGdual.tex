@@ -864,7 +864,7 @@ c_{W_1 W_2 W_3}: \LG( W_1, W_2 ) \times \LG( W_2, W_3 ) \lto \LG( W_1, W_3 ) \, 
 \ee
 Given a triple of composable $1$-morphisms $X, Y, Z$ there is a natural isomorphism $\alpha_{XYZ}: (X\otimes Y)\otimes Z \lra X\otimes (Y \otimes Z)$ given by the usual formula $(a \otimes b) \otimes c \lmt a \otimes (b \otimes c)$. In the rest of the paper we drop the ``$\circ$'' notation for composition and use only tensor products.
 
-Finally, we define the unit $1$-morphisms $\Delta_W: W \lto W$ and the left and right unit actions $\lambda, \rho$ for the bicategory $\LG$. Given a ring $R = k[x_1,\ldots,x_n]$ we write $\Re = R\otimes_k R = k[x,x']$ where $x_i = x_i \otimes 1$ and $x_i' = 1 \otimes x_i$. Given $W\in R$ there is always the \textsl{unit matrix factorisation} $\Delta_W \in \hmf(\Re, \widetilde W)$ where $\widetilde W = W\otimes 1 - 1\otimes W$. 
+Finally, we define the units $\Delta_W: W \lto W$ and the left and right unit actions $\lambda, \rho$ for the bicategory $\LG$. Given a ring $R = k[x_1,\ldots,x_n]$ we write $\Re = R\otimes_k R = k[x,x']$ where $x_i = x_i \otimes 1$ and $x_i' = 1 \otimes x_i$. Given $W\in R$ there is always the \textsl{unit matrix factorisation} $\Delta_W \in \hmf(\Re, \widetilde W)$ where $\widetilde W = W\otimes 1 - 1\otimes W$. 
 Using formal symbols $\theta_i$ we define the $\Re$-module
 $$
 \Delta_W = \bigwedge \Big( \bigoplus_{i=1}^n \Re \theta_i \Big)
@@ -1957,7 +1957,7 @@ Throughout we write $R = k[x]$, $S = k[z]$ and $\Re  = R_1 \otimes_k R_2$ with $
 
 The chain level representations for the evaluation and coevaluation maps depend on a choice of homogeneous basis $\{ e_i \}_{i}$ for $X$ with dual basis $\{ e_i^* \}_{i}$, but the homotopy equivalence classes are independent of this choice. We also give completely elementary expressions for these maps involving only divided difference operators, see Remarks \ref{remark:explicitev} and \ref{remark:coev_divideddiff}. 
 
-To define the coevaluation map we need to introduce various notation, beginning with:
+To define the coevaluation maps we need to introduce various notation, beginning with:
 \[
 \iota_X = \sum_{j} (-1)^{|e_j|} e_j^* \otimes e_j \in X^\dual \otimes_S X, \qquad \iota'_X = \sum_j e_j \otimes e_j^* \in X \otimes_R {}^\dual X\,.
 \]
@@ -1982,7 +1982,7 @@ These maps are used to define $\widetilde\coev_X$, and similar constructions go 
 
 Next we come to the evaluation maps. These maps take values in the exterior algebra $\Delta$, which is $\nZ$-graded by form-degree, and we remark that to prove the adjointness of ${}^\dual X$ and $X^\dual$ to $X$ in $\LG$ it will actually be enough to describe the components of $\widetilde \eval_X$ and $\eval_X$ that land in form-degree zero (see Lemmas \ref{lemma:morphismevalzero} and \ref{lemma:morphismevalzeroother}). However, the full formulas are necessary in general string diagrams.
 
-To write down chain maps it is necessary to make various choices. As the construction in Section~\ref{subsec:eval} below will show (see particularly Remark~\ref{remark:indeptlambda}) the result is independent of all of these choices up to homotopy. For each $1 \le i \le n$ we choose a null-homotopy $\lambda_i$ on $X$ for the action of $\partial_{x_i} W$, for example $\lambda_i = - \partial_{x_i}(d_X)$ is such a null-homotopy by the Leibniz rule, and for each $1 \le j \le m$ we choose a null-homotopy $\mu_j$ on $X$ for the action of $\partial_{z_j} V$, for example $\mu_j = \partial_{z_j}(d_X)$, and define
+To write down chain maps it is necessary to make various choices. As the construction in Section~\ref{subsec:eval} below will show (see particularly Remark~\ref{remark:indeptlambda}) the result is independent of all of these choices up to homotopy. For $1 \le i \le n$ we choose a null-homotopy $\lambda_i$ on $X$ for the action of $\partial_{x_i} W$, for example $\lambda_i = - \partial_{x_i}(d_X)$ is such a null-homotopy by the Leibniz rule, and for $1 \le j \le m$ we choose a null-homotopy $\mu_j$ on $X$ for the action of $\partial_{z_j} V$, for example $\mu_j = \partial_{z_j}(d_X)$, and define
 \[
 \Lambda^{(x)} = \lambda_1 \ldots \lambda_n\,, \qquad
 \Lambda^{(z)} = \mu_1 \ldots \mu_m\,.
@@ -2022,7 +2022,7 @@ We have written the formulas with Atiyah classes of e.\,g.~$X \otimes_R X^\vee$ 
 %\]
 %The residue integrates out the $S$, leaving us with an element of $\Delta_W$. 
 
-\begin{remark} There is a question of global signs. If we multiply $\eval$ and $\coev$ by a nonzero scalars~$\lambda$ and~$\lambda^{-1}$, respectively, then the resulting $2$-morphisms still define an adjunction between $X^\dual$ and $X$. The interaction between the two adjunctions fixing our normalisation\footnote{which differs from \cite{survey} by a sign $(-1)^m$ on both $\eval$ and $\coev$} is the pivotality identity of Section \ref{sec:wiggliesandsigns}.
+\begin{remark} There is a question of global signs. If we multiply $\eval$ and $\coev$ by a nonzero scalars~$a$ and~$a^{-1}$, respectively, then the resulting $2$-morphisms still define an adjunction between $X^\dual$ and $X$. The interaction between the two adjunctions fixing our normalisation\footnote{which differs from \cite{survey} by a sign $(-1)^m$ on both $\eval$ and $\coev$} is the pivotality identity of Section \ref{sec:wiggliesandsigns}.
 \end{remark}
 
 \subsection{Coevaluation}\label{subsec:derivcoeval}
@@ -4422,7 +4422,7 @@ A bicategory~$\mathcal B$ \textsl{has shadows} if there is a category~$\mathcal 
 $$
 \langle\!\langle - \rangle\!\rangle : \mathcal B(A,A) \lra \mathcal C 
 $$
-for every object $A\in \mathcal B$ and natural isomorphisms $\theta : \langle\!\langle X \otimes Y \rangle\!\rangle \lra \langle\!\langle Y \otimes X \rangle\!\rangle$ for every pair of composable 1-morphisms $X,Y$, such that the diagrams
+for every object $A\in \mathcal B$ and natural isomorphisms $\theta : \langle\!\langle X \otimes Y \rangle\!\rangle \lra \langle\!\langle Y \otimes X \rangle\!\rangle$ for every pair of composable 1-morphisms $X: A \lto B,Y: B \lto A$, such that the diagrams
 $$
 \xymatrix@C+0.5pc{%
 \langle\!\langle (X \otimes Y) \otimes Z \rangle\!\rangle \ar[r]^-{\theta} \ar[d]_-{\langle\!\langle \alpha \rangle\!\rangle} & 
@@ -4455,8 +4455,8 @@ The bicategory $\LG$ has shadows given by
 \, , \qquad
 Z \lmt H^*(Z\otimes_{\Re} R)
 \end{gather*}
-with $\theta: \langle\!\langle X \otimes Y \rangle\!\rangle \lra \langle\!\langle Y\otimes X  \rangle\!\rangle$ induced by the graded swap map $X \otimes_{\Re} Y \lra Y \otimes_{\Se} X$ 
-for $X \in \LG( (R,W), (S,V) )$ and $Y \in \LG( (S,V), (R,W) )$; furthermore, if~$Z$ above comes with a nontrivial idempotent, $\langle\!\langle - \rangle\!\rangle$ sends it to its induced action on $H^*(Z\otimes_{\Re} R)$. 
+and the isomorphism $\theta: \langle\!\langle X \otimes Y \rangle\!\rangle \lra \langle\!\langle Y\otimes X  \rangle\!\rangle$ induced by the graded swap map $X \otimes_{\Re} Y \lra Y \otimes_{\Se} X$ 
+for $X \in \LG( (R,W), (S,V) )$ and $Y \in \LG( (S,V), (R,W) )$. %; furthermore, if~$Z$ above comes with a nontrivial idempotent, $\langle\!\langle - \rangle\!\rangle$ sends it to its induced action on $H^*(Z\otimes_{\Re} R)$. 
 \end{proposition}
 
 The proof is a straightforward check of the axioms. Since $\LG$ is a bicategory with adjoints and shadows it is automatically equipped with a 2-categorical trace operation as introduced and discussed at length in~\cite{p0807.1471, ps0910.1306}. We only quote the definition 
