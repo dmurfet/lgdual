@@ -1974,36 +1974,55 @@ is the matrix factorisation of $W - V$ described in \eqref{eq:differentials_adjo
 \, , \qquad
 \widetilde\eval_X: X \otimes_R X^\dual \lto \Delta_V \label{eq:derivcoeval2}
 \end{align}
-and then in Section~\ref{sec:Zorro} we prove that the Zorro moves~\eqref{Zorros} and~\eqref{otherZorros} hold for these maps. For earlier work in this direction see~\cite{brs0909.0696, cr1006.5609}. 
-%These explicit expressions can be useful in concrete examples, but in general they are difficult to manipulate, hence for example in the proof of the Zorro moves we will use the presentations \eqref{eq:coev10}--\eqref{eq:constructevalmap01} in terms of Atiyah classes. 
+and then in Section~\ref{sec:Zorro} we will prove that the Zorro moves~\eqref{Zorros} and~\eqref{otherZorros} hold for these maps. We begin by giving the explicit formulas for the evaluation and coevaluation maps in terms of Atiyah classes and residues, in Definition \ref{defa:first_coevblah} and Definition \ref{defa:first_evblah} below. It is not immediately obvious that these complicated formulas even define chain maps, but in Section \ref{subsec:derivcoeval} and Section \ref{subsec:eval} we show how to construct these chain maps from simple inputs using homological perturbation. On a first reading, we suggest that the reader proceed directly from the definition of the evaluation and coevaluation maps to the proof in Section~\ref{sec:Zorro} that these morphisms define adjunctions. For earlier work in this direction see~\cite{brs0909.0696, cr1006.5609}. 
 
 Throughout we write $R = k[x]$, $S = k[z]$ and $\Re  = R_1 \otimes_k R_2$ with $R_i = R$ and $\Se  = S_1 \otimes_k S_2$ with $S_i = S$. Then $\eval_X, \widetilde\coev_X$ are $\Re$-linear morphisms of linear factorisations of $\widetilde{W} = W \otimes 1 - 1 \otimes W$, while $\coev_X, \widetilde\eval_X$ are $\Se$-linear morphisms of linear factorisations of $\widetilde{V} = V \otimes 1 - 1 \otimes V$. %The differentials on $\Delta_V, \Delta_W$ are given by~\eqref{DeltaW}. We will also frequently make use of the canonical maps from Section~\ref{section:canonicalmaps}.
 
 \begin{remark} The matrix factorisations $X^\dual, {}^\dual X$ are canonically isomorphic to $X^\vee[n]$ and $X^\vee[m]$ respectively, but there are good reasons to prefer the presentation of \eqref{eq:derivcoeval11}, for example the graphical calculus of Section \ref{sec:wiggliesandsigns}. While $R[n] \otimes_R X^\vee$ is isomorphic to $X^\vee[n]$ with no intervention of signs, the isomorphism $X^\vee[m] \cong X^\vee \otimes_S S[m]$, $\nu \lmt (-1)^{m|\nu|} \nu$, does involve signs.
 \end{remark}
 
-The chain level representations for the evaluation and coevaluation maps depend on a choice of homogeneous basis $\{ e_i \}_{i}$ for $X$ with dual basis $\{ e_i^* \}_{i}$, but the homotopy equivalence classes are independent of this choice. We also give completely elementary expressions for these maps involving only divided difference operators, see Remarks \ref{remark:explicitev} and \ref{remark:coev_divideddiff}. The coevaluation maps are defined for $\gamma \in \Delta_W$ and $\gamma' \in \Delta_V$ by
+The chain level representations for the evaluation and coevaluation maps depend on a choice of homogeneous basis $\{ e_i \}_{i}$ for $X$ with dual basis $\{ e_i^* \}_{i}$, but the homotopy equivalence classes are independent of this choice. We also give completely elementary expressions for these maps involving only divided difference operators, see Remarks \ref{remark:explicitev} and \ref{remark:coev_divideddiff}. 
+
+To define the coevaluation map we need to introduce various notation, beginning with:
+\[
+\iota_X = \sum_{j} (-1)^{|e_j|} e_j^* \otimes e_j \in X^\dual \otimes_S X, \qquad \iota'_X = \sum_j e_j \otimes e_j^* \in X \otimes_R {}^\dual X\,.
+\]
+In the exterior algebra which is the underlying graded module of $\Delta_W$ we write $\wedge$ for the multiplication, and $\varepsilon: \Delta_W \lto \Re$ is the map from \eqref{eq:vareps}. Since $X^\dual \otimes_S X$ is an $\Re$-module, we can talk about the Atiyah class with respect to the ring map $R_2 \lto \Re$ (Example \ref{remark:linearatother}) which is defined by taking the commutator with the operator $d$ on $\Bar = \Omega_{R_2}(\Re)$ which ``differentiates'' in the $R_1$-directions:
+\[
+\At_{R_1}(X^\dual \otimes_S X) = [d, d_{X^\dual \otimes X}]: (X^\dual \otimes_S X) \otimes_{\Re} \Bar \lto (X^\dual \otimes_S X) \otimes_{\Re} \Bar\,.
+\]
+Note that $[d, d_{X^\dual \otimes X}] = [d, d_{X^\dual} \otimes 1_X]$ as $d$ is $R_2$-linear. The twisted version $\Atlarrow_{R_1}(X^\dual \otimes_S X)$ of this Atiyah class is defined by formally moving the noncommutative forms to the left (see Definition \ref{eq:leftarrowAt}) and given $\gamma \in \Delta_W$ and $l \ge 0$ we may define a map, writing $X^\dual X$ for $X^\dual \otimes_S X$,
+\[
+\xymatrix{
+X^\dual X \ar[rr]^-{\Atlarrow_{R_1}(X^\dual X)^l} & & \gamma_* \Bar \otimes_{\Re} ( X^\dual X ) \ar[r]^-{\Psi} & \Delta_W \otimes_{\Re} (X^\dual X) \ar[r]^-{\gamma \wedge (-)} & \Delta_W \otimes_{\Re} (X^\dual X) \ar[r]^-{\varepsilon} & X^\dual X
+}\,.
+\]
+These maps are used to define $\widetilde\coev_X$, and similar constructions go into $\coev_X$:
+
+\begin{definition}\label{defa:first_coevblah} The coevaluation maps are defined for $\gamma \in \Delta_W$ and $\gamma' \in \Delta_V$ by
 \begin{align}
 \widetilde\coev_X(\gamma) &= \sum_{l \ge 0} \varepsilon \left( \gamma \wedge  (-1)^{l+nl} \Psi \Atlarrow_{R_1}(X^\dual \otimes_S X)^l( \iota_X ) \right) , \label{eq:coev10-2}\\
 \coev_X( \gamma' ) &= \sum_{l \ge 0} \varepsilon \left( \gamma' \wedge (-1)^{m+l+ml} \Psi \Atlarrow_{S_1}(X \otimes_R {}^\dual X)^l( \iota'_X ) \right) \label{eq:coev102}
 \end{align}
-where $\iota_X = \sum_{j} (-1)^{|e_j|} e_j^* \otimes e_j \in X^\dual \otimes_S X$ and $\iota'_X = \sum_j e_j \otimes e_j^* \in X \otimes_R {}^\dual X$, $\gamma \wedge (-)$ means multiplication in the exterior algebra $\Delta_W$ and $\varepsilon: \Delta_W \lto \Re$ is from \eqref{eq:vareps}. Note that $\At_{R_1}(X^\dual \otimes_S X) = [d, d_{X^\dual \otimes X}] = [d, d_{X^\dual}]$ as $d$ is $R_2$-linear; a similar simplification applies to $\Atlarrow_{S_1}(X \otimes_R {}^\dual X)$.
+\end{definition}
 
 Next we come to the evaluation maps. These maps take values in the exterior algebra $\Delta$, which is $\nZ$-graded by form-degree, and we remark that to prove the adjointness of ${}^\dual X$ and $X^\dual$ to $X$ in $\LG$ it will actually be enough to describe the components of $\widetilde \eval_X$ and $\eval_X$ that land in form-degree zero (see Lemma \ref{lemma:morphismevalzero} and \ref{lemma:morphismevalzeroother}). However, the full formulas are necessary in general string diagrams.
 
-The chain level representatives for the evaluation maps are
+To write down chain maps it is necessary to make various choices. As the construction in Section \ref{subsec:eval} below will show (see particularly Remark \ref{remark:indeptlambda}) the result is independent of all of these choices up to homotopy. For each $1 \le i \le n$ we choose a null-homotopy $\lambda_i$ on $X$ for the action of $\partial_{x_i} W$, for example $\lambda_i = - \partial_{x_i}(d_X)$ is such a null-homotopy by the Leibniz rule, and for each $1 \le j \le m$ we choose a null-homotopy $\mu_j$ on $X$ for the action of $\partial_{z_j} V$, for example $\mu_j = \partial_{z_j}(d_X)$, and define
+\[
+\Lambda^{(x)} = \lambda_1 \ldots \lambda_n\,, \qquad
+\Lambda^{(z)} = \mu_1 \ldots \mu_m\,.
+\]
+
+\begin{definition}\label{defa:first_evblah} The chain level representatives for the evaluation maps are
 \begin{gather}
 \widetilde\eval_X( \eta \otimes \nu ) = \sum_{l \ge 0} (-1)^{n+n|\eta|} \Res_{R/k} \left[ \frac{ \Psi \big< \lAt_{S_1}(X \otimes_R X^\vee)^l( \Lambda^{(x)} \eta \otimes \nu ) \big> \underline{\operatorname{d}\!x}}{\partial_{x_1}W, \ldots, \partial_{x_n} W} \right]\label{eq:constructevalmap00} , \\
 \eval_X( \nu \otimes \eta ) = \sum_{l \ge 0} (-1)^m \Res_{S/k} \left[ \frac{ \Psi \big< \lAt_{R_1}(X^{\vee} \otimes_S X)^l( \nu \Lambda^{(z)} \otimes \eta )\big> \underline{\operatorname{d}\!z}}{\partial_{z_1}V, \ldots, \partial_{z_m} V} \right]\label{eq:constructevalmap01}
 \end{gather}
-where for each $1 \le i \le n$ we choose a null-homotopy $\lambda_i$ on $X$ for the action of $\partial_{x_i} W$, for example $\lambda_i = - \partial_{x_i}(d_X)$ is such a null-homotopy by the Leibniz rule, and for each $1 \le j \le m$ we choose a null-homotopy $\mu_j$ on $X$ for the action of $\partial_{z_j} V$, for example $\mu_j = \partial_{z_j}(d_X)$, and define
-\begin{align*}
-\Lambda^{(x)} &= \lambda_1 \ldots \lambda_n\,, &&
-\underline{\operatorname{d}\!x} = \ud x_1 \ldots \ud x_n\,,\\
-\Lambda^{(z)} &= \mu_1 \ldots \mu_m\,, &&
-\underline{\ud z} = \ud z_1 \ldots \ud z_m\,.
-\end{align*}
-We will show in Remark \ref{remark:indeptlambda} that $\eval_X$ and $\widetilde{\eval}_X$ are independent up to homotopy of these choices of null-homotopies. The evaluation map $\langle - \rangle$ in \eqref{eq:constructevalmap00} is the $(\Se \otimes_k R)$-linear map
+where $\underline{\operatorname{d}\!x} = \ud x_1 \ldots \ud x_n$ and $\underline{\ud z} = \ud z_1 \ldots \ud z_m$.
+\end{definition}
+
+The evaluation map $\langle - \rangle$ in \eqref{eq:constructevalmap00} is the $(\Se \otimes_k R)$-linear map
 \begin{gather*}
 \langle - \rangle: X \otimes_R X^\vee \lto \Se \otimes_k R\,,\qquad 
 \langle e_i \otimes e_j^* \rangle = (-1)^{|e_i||e_j|} \delta_{ij} \, , 
@@ -2028,8 +2047,6 @@ We have written the formulas with Atiyah classes of e.\,g.~$X \otimes_R X^\vee$ 
 %}
 %\]
 %The residue integrates out the $S$, leaving us with an element of $\Delta_W$. 
-
-In principle it should be possible to check directly that the expressions \eqref{eq:coev10-2}--\eqref{eq:constructevalmap01} give well-defined morphisms of matrix factorisations, and the reader willing to take this on faith can proceed to the proof in Section~\ref{sec:Zorro} that these morphisms define adjunctions. In the rest of this section we show how to construct the above chain maps from simple inputs using homological perturbation; in particular this will ensure that they are morphisms of matrix factorisations.
 
 \begin{remark} There is a question of global signs. If we multiply $\eval$ and $\coev$ by a nonzero scalars~$\lambda$ and~$\lambda^{-1}$, respectively, then the resulting $2$-morphisms still define an adjunction between $X^\dual$ and $X$. The interaction between the two adjunctions fixing our normalisation\footnote{which differs from \cite{survey} by a sign $(-1)^m$ on both $\eval$ and $\coev$} is the pivotality identity of Section \ref{sec:wiggliesandsigns}.
 \end{remark}
