@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAR 2015 11:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 MAR 2015 12:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,22 +916,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 <xymatrix 6x1 202> [30] <xymatrix 5x1 198> <xymatrix 2x3 276> [31] <xymatrix
 2x1 54> <xymatrix 4x1 150> [32] <xymatrix 3x2 154> <xymatrix 2x1 100>
 <xymatrix 2x2 188> [33] <xymatrix 3x2 154> [34] <xymatrix 5x1 198> [35]
-[36] [37] [38] <xymatrix 3x1 82> <xymatrix 2x1 100> [39] <xymatrix 3x1 102>
+[36] [37] [38] <xymatrix 3x1 82> [39] <xymatrix 2x1 100> <xymatrix 3x1 102>
 <xymatrix 3x1 102> <xymatrix 3x1 102> <xymatrix 3x1 102> <xymatrix 3x1 82>
-<xymatrix 3x1 102> [40] <xymatrix 3x2 202> <xymatrix 3x2 202> [41]
-
-LaTeX Warning: Citation `awesome_sauce_textbook' on page 42 undefined on input 
-line 3013.
-
-[42] <xymatrix 2x3 249> <xymatrix 4x1 160> [43] <xymatrix 2x1 100>
-Underfull \vbox (badness 1430) has occurred while \output is active []
-
- [44]
-[45] [46] [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
-[49] [50]
+<xymatrix 3x1 102> [40] <xymatrix 3x2 202> <xymatrix 3x2 202> [41] [42]
+<xymatrix 2x3 249> <xymatrix 4x1 160> [43] <xymatrix 2x1 100> [44] [45]
+[46] [47] [48] [49] [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [51]
@@ -945,37 +934,33 @@ Underfull \vbox (badness 1708) has occurred while \output is active []
 <xymatrix 7x1 206> [54] <xymatrix 5x1 178> [55] [56] <xymatrix 3x2 148>
 <xymatrix 3x1 102> <xymatrix 3x2 148> <xymatrix 2x3 154> <xymatrix 2x3 154>
 [57] <xymatrix 2x3 150> <xymatrix 2x3 150> [58] [59]
-Underfull \hbox (badness 7133) in paragraph at lines 4927--4930
+Underfull \hbox (badness 7133) in paragraph at lines 4936--4939
 []\OT1/cmr/m/n/10 A. Joyal and R. Street, \OT1/cmr/m/sl/10 The ge-om-e-try of t
 en-sor cal-cu-lus II\OT1/cmr/m/n/10 , draft avail-able at
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 4936--4939
+Underfull \hbox (badness 7326) in paragraph at lines 4945--4948
 []\OT1/cmr/m/n/10 A. Ka-pustin, \OT1/cmr/m/sl/10 Topo-log-i-cal Field The-ory, 
 Higher Cat-e-gories, and Their Ap-pli-ca-tions\OT1/cmr/m/n/10 ,
  []
 
 [60] [61]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5068.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5068.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5077.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5077.
  (./LGdual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5068.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5068.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5077.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5077.
 
 Package rerunfilecheck Info: File `LGdual.out' has not changed.
 (rerunfilecheck)             Checksum: C0E684F87D1D81200C0376EBA52C730F;1512.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5068.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5077.
  ) 
 Here is how much of TeX's memory you used:
  25677 strings out of 493315
- 468300 string characters out of 6137904
- 842391 words of memory out of 5000000
- 28266 multiletter control sequences out of 15000+600000
+ 468287 string characters out of 6137904
+ 841356 words of memory out of 5000000
+ 28265 multiletter control sequences out of 15000+600000
  23184 words of font info for 104 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,20n,80p,3239b,2822s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1016,10 +1001,10 @@ ist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
 e1/public/xypic/xycmbt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pu
 blic/xypic/xydash10.pfb>
-Output written on LGdual.pdf (61 pages, 919200 bytes).
+Output written on LGdual.pdf (61 pages, 919880 bytes).
 PDF statistics:
- 1456 PDF objects out of 1728 (max. 8388607)
- 1322 compressed objects within 14 object streams
- 413 named destinations out of 1000 (max. 500000)
+ 1460 PDF objects out of 1728 (max. 8388607)
+ 1326 compressed objects within 14 object streams
+ 414 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

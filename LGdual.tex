@@ -2283,19 +2283,23 @@ In this section we will show that the bicategory $\LG$ of Landau-Ginzburg models
 %%%%%%%%%%%%%%%%%%%%%%
 . 
 \ee
-Here we label the domains by the rings $R = k[x]$ and $S = k[z]$ pertaining to the two objects of $\LG$. Some elements of notation:
-\begin{itemize}
-\item We write $f_i = \partial_{x_i} W$ and choose a null-homotopy $\lambda_i$ on $X$ for the action of $f_i$. For example $\lambda_i= -\partial_{x_i}d_X(x,z)$ will do.
-\item $\Re = R_1 \otimes_k R_2$ with $R_i = R$ and $\Se  = S_1 \otimes_k S_2$ with $S_i = S$.
-\item $\Bar = \Omega_{R_2}(\Re)$. Recall that left and right multiplication in $\Omega_{R_2}(\Re)$ make $\Bar$ into an $\Re$-bimodule. % = \Omega R_1 \otimes_k R_2$.is an $R_1$-bimodule since $\Omega R_1$ is, and it will be important that many of the operators in this section are \textsl{right} $R_1$-linear but not left $R_1$-linear.
-\end{itemize}
-We call the left-hand side of (\ref{Zorro1detail}) the \textsl{Zorro map} and denote it $\mathcal Z$. It is the composite
+Here we label the domains by the rings $R = k[x]$ and $S = k[z]$ pertaining to the two objects of $\LG$. We call the left-hand side of (\ref{Zorro1detail}) the \textsl{Zorro map} and denote it $\mathcal Z$. It is the composite
 \be\label{eq:zorro1a1}
 \xymatrix@C+2pc{
 X \ar[r]^-{\rho^{-1}} & X \otimes_R \Delta_W \ar[r]^-{1 \otimes\,\widetilde{\coev}} & X \otimes_R X^{\dagger} \otimes_S X \ar[r]^-{\widetilde{\eval}\, \otimes 1} & \Delta_V \otimes_S X \ar[r]^-{\lambda} & X\,.
 }
 \ee
-We prove that this map is homotopic to the identity on $X$. Since the argument is very similar for the other identity of \eqref{otherZorros} and the two identities of \eqref{Zorros}, we do not give full details in these cases. To establish the expression for $\mathcal Z$ in Lemma \ref{lemma:Zorrointermediate} below we need:
+We prove that this map is homotopic to the identity on $X$. Since the argument is very similar for the other identity of \eqref{otherZorros} and the two identities of \eqref{Zorros}, we do not give full details in these cases. 
+
+Some elements of notation:
+\begin{itemize}
+\item $D = [d_X, -]$ is the differential on $\End(X) = \End_{R \otimes_k S}(X)$.
+\item $\{ e_i \}_{i}$ denotes a homogeneous $(S \otimes_k R)$-basis of $X$ and $\{ e_i^* \}_{i}$ the dual basis.
+\item $f_i = \partial_{x_i} W$ and we choose a null-homotopy $\lambda_i$ on $X$ for the action of $f_i$. For example $\lambda_i= -\partial_{x_i}d_X(x,z)$ will do. Postcomposition with $\lambda_i$ defines an operator $\psi \mapsto \lambda_i \circ \psi$ on $\End(X)$, which we also denote by $\lambda_i$. 
+\item $\Re = R_1 \otimes_k R_2$ with $R_i = R$ and $\Se  = S_1 \otimes_k S_2$ with $S_i = S$.
+\item $\Bar = \Omega_{R_2}(\Re)$. Recall that left and right multiplication in $\Omega_{R_2}(\Re)$ make $\Bar$ into an $\Re$-bimodule. % = \Omega R_1 \otimes_k R_2$.is an $R_1$-bimodule since $\Omega R_1$ is, and it will be important that many of the operators in this section are \textsl{right} $R_1$-linear but not left $R_1$-linear.
+\end{itemize}
+To establish the expression for $\mathcal Z$ in Lemma \ref{lemma:Zorrointermediate} below we need:
 
 \begin{definition} With $\underline{\operatorname{d}\!x}=\operatorname{d}\!x_1\ldots \operatorname{d}\!x_n$ we define the degree zero map
 \be\label{eq:bigpairing_defn}
@@ -2318,19 +2322,18 @@ This map is \textsl{left} $R_2$-linear and \textsl{right} $R_1$-linear, that is:
 Recall that the left $\Re$-action on $\Bar$ is given by \eqref{eq:leftreactionb}, and that $\Psi$ is left $\Re$-linear. Since $\varepsilon$ is of course $\Re$-linear, and the residue is $R_2$-linear, we deduce \eqref{eq:bigpairing_right_linear0}. The linearity on the \textsl{right} is less obvious but more important. On noncommutative forms $\omega$ of degree $n$, Lemma \ref{lem:PsiToTheRight} tells us that $\Psi( \omega \cdot (r \otimes 1) ) = \Psi( \omega ) \cdot (1 \otimes r)$. Combined with the $R_2$-linearity of the residue and the fact that \eqref{eq:bigpairing_defn} is only nonvanishing on degree $n$ forms, \eqref{eq:bigpairing_right_linear} follows.
 \end{proof}
 
-The formula for $\mathcal Z$ further involves the Atiyah class of the complex $\End(X) = \Hom_{S \otimes_k R}(X,X)$ of $S \otimes_k R$-modules with respect to the ring map $k \lto R$. This is an operator
+The formula for $\mathcal Z$ further involves the Atiyah class of the complex $\End(X)$ of $(S \otimes_k R)$-modules with respect to the ring map $k \lto R$. This is an operator
 \be\label{eq:atiyah_class_endX}
 \At = \At_R( \End(X) ): \End(X) \otimes_R \Omega R \lto \End(X) \otimes_R \Omega R
 \ee
-which is $S$-linear, and also right $R$-linear using multiplication by $R$ on the right of $\Omega R$. As explained in Example \ref{remark:linearatotherR}, this can be recast using the Bar complex $\Bar = \Omega R_1 \otimes_k R_2$ by identifying the $R$ in \eqref{eq:atiyah_class_endX} with $R_1$ and tensoring on the right with $R_2$. Then $\At$ is an $(S \otimes_k R_1)$-linear operator
+which is $S$-linear, and also right $R$-linear using multiplication by $R$ on the right of $\Omega R$. As explained in Example \ref{remark:linearatotherR}, this can be recast using the Bar complex $\Bar = \Omega R_1 \otimes_k R_2$ by identifying the $R$ in \eqref{eq:atiyah_class_endX} with $R_1$ and tensoring on the right with $R_2$. Then $\At$ is an $(S \otimes_k R_1)$-linear operator\footnote{The $R_1$-linearity of $\At$ is with respect to right multiplication by $R_1$ on $\Bar$.}
 \[
-\At: \End(X) \otimes_{R_1} \Bar \lto \End(X) \otimes_{R_1} \Bar
+\At = [d,D]: \End(X) \otimes_{R_1} \Bar \lto \End(X) \otimes_{R_1} \Bar\,.
 \]
-again using right multiplication by $R_1$ on $\Bar$. Postcomposition with $\lambda_i$ defines an operator $\psi \mapsto \lambda_i \circ \psi$ on $\End(X)$, which we also denote by $\lambda_i$. Finally, the supertrace is a map
+The extension of the usual operator $d$ on $\Bar$ to a connection on $\End(X) \otimes_{R_1} \Bar$ is as defined in Section \ref{section:atiyahclasses} using the natural basis $e_i \circ e_j^*$ for $\End(X)$. Finally, the supertrace is a map
 \be\label{eq:strasfunction}
 \str = \str \otimes 1: \End(X) \otimes_{R_1} \Bar \lto (S \otimes_k R) \otimes_{R_1} \Bar \cong S \otimes_k \Bar\,.
 \ee
-If we denote by $\{ e_i \}_{i}$ a homogeneous $(S \otimes_k R)$-basis of $X$ and by $\{ e_i^* \}_{i}$ the dual basis, then: 
 
 \begin{lemma}\label{lemma:Zorrointermediate} We have
 \be\label{Zorrointermediate}
@@ -2369,25 +2372,28 @@ To prove that $\mathcal{Z} \simeq 1_X$ it is therefore equivalent to prove that 
 
 We are led to study the map 
 \begin{equation}\label{eq:strlambdaat}
-\str\, \lambda_1 \ldots \lambda_n \At^n: \End(X) \otimes_{R_1} \Bar \lto S \otimes_k \Bar
+\str\, \lambda_1 \ldots \lambda_n \At^n( - \otimes - ): \End(X) \otimes_{R_1} \Bar \lto S \otimes_k \Bar\,.
 \end{equation}
-defined on a tensor $\psi \otimes \alpha$ with $\psi \in \End(X), \alpha \in \Bar$ by
-\[
-\psi \otimes \alpha \mapsto \str\left( \lambda_1 \cdots \lambda_n \At^n( \psi \otimes \alpha ) \right)\,.
-\]
+%defined on a tensor $\psi \otimes \alpha$ with $\psi \in \End(X), \alpha \in \Bar$ by
+%\[
+%\psi \otimes \alpha \mapsto \str\left( \lambda_1 \cdots \lambda_n \At^n( \psi \otimes \alpha ) \right)\,.
+%\]
 %Throughout the concatenation of $\str$ with another operator, e.\,g.~$\str \lambda_i$, means the composed operator $\str \circ \lambda_i$ given by $\psi \mapsto \str( \lambda_i \psi )$ and not $\str( \lambda_i )$. 
-We write $d$ for the usual operator on $\Bar$ and also its extension to a connection on $\End(X) \otimes_{R_1} \Bar$ as defined in Section \ref{section:atiyahclasses} using the natural basis $e_i \circ e_j^*$. With $D = [d_X, -]$ the differential on $\End(X)$, we have $[d, \str] = 0$, $\str \, \circ \, D = 0$ and $\At = [d,D]$. Thus:
 
 \begin{lemma}\label{lemma:stratzero} 
-$\str \circ \At = 0$.
+$\str \circ \At = 0$ as maps $\End(X) \otimes_{R_1} \Bar \lto S \otimes_k \Bar$.
 \end{lemma}
+\begin{proof}
+We have $[d, \str] = 0$, $\str \, \circ \, D = 0$ and $\At = [d,D]$. So
+\[
+\str \circ \At = \str \circ  ( d D + D d ) = d \str D + \str D d = 0\,.
+\]
+\end{proof}
 
-In what follows we identify $f_i = \partial_{x_i} W$ with an operator of \textsl{left} multiplication on $\End(X) \otimes_{R_1} \Bar$ defined by $\psi \otimes \alpha \mapsto f_i \psi \otimes \alpha = \psi \otimes (f_i \otimes 1)\alpha$. Similarly we write $d f_i$ for left multiplication by this element, with Koszul signs $\psi \otimes \alpha \mapsto (-1)^{|\psi|} \psi \otimes d f_i \alpha$. We can use the graded Jacobi identity to see that $[\lambda_i, \At] = [d, f_i]$ up to homotopy, and more generally: 
+In what follows we identify $f_i = \partial_{x_i} W$ with an operator of left multiplication on $\End(X) \otimes_{R_1} \Bar$ defined by $\psi \otimes \alpha \mapsto f_i \psi \otimes \alpha = \psi \otimes (f_i \otimes 1)\alpha$. Similarly we write $d f_i$ for left multiplication by this element, with Koszul signs $\psi \otimes \alpha \mapsto (-1)^{|\psi|} \psi \otimes d f_i \alpha$. We can use the graded Jacobi identity to see that $[\lambda_i, \At] = [d, f_i]$ up to homotopy, and more generally: 
 
 \begin{lemma}\label{lemma:commutator1} $[ \lambda_1 \ldots \lambda_n, \At ] = \sum_{i=1}^n (-1)^i \big[d, f_i \lambda_1 \ldots \widehat{\lambda_i} \ldots \lambda_n \big] - [D, [d, \lambda_1 \ldots \lambda_n]]$.
 \end{lemma}
-
-Postcomposing with the supertrace yields an equality of functions $\End(X) \otimes_{R_1} \Bar \lto S \otimes_k \Bar$.
 
 \begin{lemma}\label{lemma:strlambdaatfirst} $\str \lambda_1 \ldots \lambda_n \At = \sum_{i=1}^n (-1)^i \big[d, f_i \str \lambda_1 \ldots \widehat{\lambda_i} \ldots \lambda_n \big] + (-1)^{n+1} [d, \str \lambda_1 \ldots \lambda_n] D$.
 \end{lemma}
@@ -3005,12 +3011,12 @@ q_X :=
 : \Omega \otimes X^\dual \otimes \Omega \lra {}^\dual X\,.
 \ee
 We can ask whether this $2$-isomorphism is \textsl{monoidal}, by which we mean that it is compatible with composition of $1$-morphisms. 
-If $X: A \lto B$ and $Y: B \lto C$ are $1$-morphisms then $X^{\dual} \otimes Y^{\dual}$ and ${}^\dual X \otimes {}^\dual Y$ are right and left adjoint to $Y \otimes X$, respectively, by the usual principle that the composite of adjoints is the adjoint of the composite \cite[Section $2$]{kellystreet}. Hence by uniqueness of adjoints there are canonical isomorphisms
+If $X: A \lto B$ and $Y: B \lto C$ are $1$-morphisms then $X^{\dual} \otimes Y^{\dual}$ and ${}^\dual X \otimes {}^\dual Y$ are right and left adjoint to $Y \otimes X$, respectively, by the usual principle that the composite of adjoints is the adjoint of the composite; see \cite[\S 2.1]{kellystreet} and \cite[Proposition I, $6.3$]{gray}. Hence by uniqueness of adjoints there are canonical isomorphisms
 \[
 \mathscr{R}: (Y \otimes X)^{\dual} \stackrel{\cong}{\lra} X^{\dual} \otimes Y^{\dual}\, , \qquad 
 \mathscr{L}: {}^\dual (Y \otimes X) \stackrel{\cong}{\lra} {}^\dual X \otimes {}^\dual Y\,.
 \]
-These canonical isomorphisms can be presented by diagrams, as shown below \cite{awesome_sauce_textbook}. In such diagrams the dotted horizontal line denotes an identity map $Y \otimes X \lto Y \otimes X$, but with the domain presented as two lines labelled $Y,X$ and the target presented as a single line labelled $Y \otimes X$.
+These canonical isomorphisms can be written explicitly in terms of the units and counits of adjunction \cite[Proposition I, $6.3$]{gray} and may thus be presented by diagrams, which are shown below. In such diagrams the dotted horizontal line denotes an identity map $Y \otimes X \lto Y \otimes X$, but with the domain presented as two lines labelled $Y,X$ and the target presented as a single line labelled $Y \otimes X$.
 \[
 \mathscr R = 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -4781,6 +4787,9 @@ P.~S.~Aspinwall, T.~Bridgeland, A.~Craw, M.~R.~Douglas, and M.~Gross, \textsl{Di
 \bibitem[Ati57]{atiyahconn}
 M.~Atiyah, \textsl{Complex analytic connections in fibre bundles}, Trans. Amer.
   Math. Soc. \textbf{85} (1957), 181--207.
+
+%\bibitem[BK00]{atiBKyahconn}
+%B.~Bakalov and A.~Kirillov, \textsl{Lectures on tensor categories and modular functors}, University Lecture Series, AMS, 2000. 
 
 \bibitem[BFK]{ballard}
 M.~Ballard, D.~Favero and L.~Katzarkov, \textsl{A category of kernels for graded matrix factorizations and its implications for {H}odge theory}, \href{http://arxiv.org/abs/1105.3177}{[arXiv:1105.3177]}.
